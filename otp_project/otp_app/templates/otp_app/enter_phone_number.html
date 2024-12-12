@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'otp_app/style.css' %}">
+    <title>Enter Phone Number</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Your Phone Number</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Send OTP</button>
+        </form>
+    </div>
+</body>
+</html>
+
